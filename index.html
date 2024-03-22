@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniCo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/glide.core.css">
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to FurniCo</h1>
+    </header>
+   
+    <main>
+
+        <!-- Dark Mode Icon -->
+        
+        <section id="DarkModeIcon"></section>
+
+         <!-- GSAP -->
+
+         <section id="tablesParent">
+            <img class="ThreeDImage" src="images/3D.png" >
+         </section>
+
+        <!-- Glide slider here -->
+        
+        <section id="home">
+            <div id="swipe">SWIPE</div>
+            <div class="container">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            <li class="glide__slide"><img src="images/slider1.jpg" alt="Slide 1"></li>
+                            <li class="glide__slide"><img src="images/slider2.jpg" alt="Slide 2"></li>
+                            <li class="glide__slide"><img src="images/slider3.jpg" alt="Slide 3"></li>
+                        </ul>
+                     </div>
+                </div>
+             </div>
+        
+        </section>
+
+        <!-- Cofetti -->
+
+        <section id="ConfettiArea">
+            <canvas id="confetti"></canvas>
+            <button id="button" class="button-53" role="button">Furniture Shower</button>
+        </section>
+       
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <script src="js/js-confetti.browser.js"></script>
+    <!-- <script src="js/three.module.min.js"></script> -->
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        const config = {
+            type: 'carousel',
+            perView: 2,
+            breakpoints: {
+                800: {
+                    perView: 1
+                     }
+                }
+            }
+    </script>
+
+    <script>
+        new Glide('.glide', config ).mount()
+    </script>
+</body>
+</html>
